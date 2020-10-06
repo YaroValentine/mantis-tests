@@ -1,0 +1,2 @@
+stqa/mantis/tests/mantis_tests/MainPage.java
+ stqa.mantis.tests.mantis_tests.MainPage
