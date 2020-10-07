@@ -3,8 +3,9 @@ package stqa.mantis.appmanager;
 import org.openqa.selenium.WebDriver;
 
 public class RegistrationHelper {
+
     private final ApplicationManager app;
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public RegistrationHelper(ApplicationManager app) {
         this.app = app;

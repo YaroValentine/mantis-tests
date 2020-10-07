@@ -41,10 +41,6 @@ public class ApplicationManager {
         return properties.getProperty(key);
     }
 
-    public RegistrationHelper registration() {
-        return registrationHelper == null ? new RegistrationHelper(this) : registrationHelper;
-    }
-
     public WebDriver getDriver() {
         if (driver == null) {
             if (browser.equals(BrowserType.GOOGLECHROME)) {
@@ -57,6 +53,10 @@ public class ApplicationManager {
             driver.get(properties.getProperty("web.baseUrl"));
         }
         return driver;
+    }
+
+    public RegistrationHelper registration() {
+        return registrationHelper == null ? new RegistrationHelper(this) : registrationHelper;
     }
 
 //    public LoginPage loginPage() {
