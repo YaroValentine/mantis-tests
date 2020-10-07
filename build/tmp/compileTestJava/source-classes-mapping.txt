@@ -8,5 +8,7 @@ stqa/mantis/appmanager/ApplicationManager.java
  stqa.mantis.appmanager.ApplicationManager
 stqa/mantis/tests/RegistrationTests.java
  stqa.mantis.tests.RegistrationTests
+stqa/mantis/appmanager/FtpHelper.java
+ stqa.mantis.appmanager.FtpHelper
 stqa/mantis/tests/TestBase.java
  stqa.mantis.tests.TestBase

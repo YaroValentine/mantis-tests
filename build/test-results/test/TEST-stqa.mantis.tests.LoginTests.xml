@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="stqa.mantis.tests.LoginTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-07T15:45:39" hostname="YARO" time="1.055">
-  <properties/>
-  <testcase name="testLogin" classname="stqa.mantis.tests.LoginTests" time="1.055"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
