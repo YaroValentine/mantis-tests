@@ -14,7 +14,8 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
     private final Properties properties;
     private final String browser;
-    WebDriver driver;
+    private WebDriver driver;
+    private RegistrationHelper registrationHelper;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -24,19 +25,13 @@ public class ApplicationManager {
     public void init() throws IOException {
         String target = System.getProperty("target", "local");
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
-
-        if (browser.equals(BrowserType.GOOGLECHROME)) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
-            driver = new ChromeDriver();
-        } else if (browser.equals(BrowserType.FIREFOX)) {
-            driver = new FirefoxDriver();
-        }
-        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        driver.get(properties.getProperty("web.baseUrl"));
-
     }
 
-    public void stop() { driver.quit(); }
+    public void stop() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
     public HttpSession newSession() {
         return new HttpSession(this);
@@ -45,4 +40,26 @@ public class ApplicationManager {
     public String getProperty(String key) {
         return properties.getProperty(key);
     }
+
+    public RegistrationHelper registration() {
+        return registrationHelper == null ? new RegistrationHelper(this) : registrationHelper;
+    }
+
+    public WebDriver getDriver() {
+        if (driver == null) {
+            if (browser.equals(BrowserType.GOOGLECHROME)) {
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+                driver = new ChromeDriver();
+            } else if (browser.equals(BrowserType.FIREFOX)) {
+                driver = new FirefoxDriver();
+            }
+            driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+            driver.get(properties.getProperty("web.baseUrl"));
+        }
+        return driver;
+    }
+
+//    public LoginPage loginPage() {
+//        return loginPage == null ? new LoginPage(driver) : loginPage;
+//    }
 }
