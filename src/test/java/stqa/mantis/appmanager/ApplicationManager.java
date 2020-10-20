@@ -58,18 +58,6 @@ public class ApplicationManager {
         return driver;
     }
 
-//    public RegistrationHelper registration() {
-//        return registrationHelper == null ? new RegistrationHelper(this) : registrationHelper;
-//    }
-//
-//    public FtpHelper ftp() {
-//        return ftp == null ? new FtpHelper(this) : ftp;
-//    }
-//
-//    public MailHelper mail() {
-//        return mailHelper == null ? new MailHelper(this) : mailHelper;
-//    }
-
     public MailHelper mail() {
         if (mailHelper == null) {
             mailHelper = new MailHelper(this);
@@ -91,4 +79,15 @@ public class ApplicationManager {
         return ftp;
     }
 
+//    public RegistrationHelper registration() {
+//        return registrationHelper == null ? new RegistrationHelper(this) : registrationHelper;
+//    }
+//
+//    public FtpHelper ftp() {
+//        return ftp == null ? new FtpHelper(this) : ftp;
+//    }
+//
+//    public MailHelper mail() {
+//        return mailHelper == null ? new MailHelper(this) : mailHelper;
+//    }
 }

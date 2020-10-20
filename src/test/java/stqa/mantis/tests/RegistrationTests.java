@@ -11,12 +11,10 @@ import static org.testng.Assert.assertTrue;
 
 public class RegistrationTests extends TestBase {
     @BeforeMethod
-    public void startMailServer() {
-        app.mail().start();
-    }
+    public void startMailServer() { app.mail().start(); }
 
     @Test
-    public void testRegistration() throws IOException, InterruptedException {
+    public void testRegistration() throws IOException {
         long now = System.currentTimeMillis();
         String user = String.format("user%s", now);
         String password = "password";
