@@ -23,6 +23,10 @@ dependencies {
   testImplementation("io.qameta.allure:allure-selenide:${allureVersion}")
   implementation('io.github.bonigarcia:webdrivermanager:4.1.0')
   testImplementation('org.hamcrest:hamcrest:2.2')
+  testCompile group: 'org.subethamail', name: 'subethasmtp', version: '3.1.7'
+  compile group: 'ru.lanwen.verbalregex', name: 'java-verbal-expressions', version: '1.4'
+
+
 //  testImplementation('org.slf4j:slf4j-simple:1.7.29')
 
   testImplementation('org.testng:testng:7.1.0')

@@ -1,3 +1,7 @@
+stqa/mantis/model/MailMessage.java
+ stqa.mantis.model.MailMessage
+stqa/mantis/appmanager/HelperBase.java
+ stqa.mantis.appmanager.HelperBase
 stqa/mantis/appmanager/RegistrationHelper.java
  stqa.mantis.appmanager.RegistrationHelper
 stqa/mantis/tests/LoginTests.java
@@ -12,3 +16,5 @@ stqa/mantis/appmanager/FtpHelper.java
  stqa.mantis.appmanager.FtpHelper
 stqa/mantis/tests/TestBase.java
  stqa.mantis.tests.TestBase
+stqa/mantis/appmanager/MailHelper.java
+ stqa.mantis.appmanager.MailHelper

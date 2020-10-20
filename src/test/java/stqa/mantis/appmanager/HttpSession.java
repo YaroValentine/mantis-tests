@@ -17,8 +17,8 @@ import java.util.List;
 import java.util.Properties;
 
 public class HttpSession {
-    private CloseableHttpClient httpclient;
-    private ApplicationManager app;
+    private final ApplicationManager app;
+    private final CloseableHttpClient httpclient;
 
     public HttpSession(ApplicationManager app) {
         this.app = app;
@@ -52,7 +52,5 @@ public class HttpSession {
         String body = getTextFrom(response);
         return body.contains(String.format("<span class=\"italic\">%s</span>", username));
     }
-
-    public void testGit() {} //gregewr5h grethrth //trehrthrth
 
 }

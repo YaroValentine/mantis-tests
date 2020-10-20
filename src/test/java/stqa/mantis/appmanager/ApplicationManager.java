@@ -17,6 +17,7 @@ public class ApplicationManager {
     private WebDriver driver;
     private RegistrationHelper registrationHelper;
     private FtpHelper ftp;
+    private MailHelper mailHelper;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -45,7 +46,8 @@ public class ApplicationManager {
     public WebDriver getDriver() {
         if (driver == null) {
             if (browser.equals(BrowserType.GOOGLECHROME)) {
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver",
+                        System.getProperty("user.dir") + "/drivers/chromedriver.exe");
                 driver = new ChromeDriver();
             } else if (browser.equals(BrowserType.FIREFOX)) {
                 driver = new FirefoxDriver();
@@ -56,15 +58,37 @@ public class ApplicationManager {
         return driver;
     }
 
+//    public RegistrationHelper registration() {
+//        return registrationHelper == null ? new RegistrationHelper(this) : registrationHelper;
+//    }
+//
+//    public FtpHelper ftp() {
+//        return ftp == null ? new FtpHelper(this) : ftp;
+//    }
+//
+//    public MailHelper mail() {
+//        return mailHelper == null ? new MailHelper(this) : mailHelper;
+//    }
+
+    public MailHelper mail() {
+        if (mailHelper == null) {
+            mailHelper = new MailHelper(this);
+        }
+        return mailHelper;
+    }
+
     public RegistrationHelper registration() {
-        return registrationHelper == null ? new RegistrationHelper(this) : registrationHelper;
+        if (registrationHelper == null) {
+            registrationHelper = new RegistrationHelper(this);
+        }
+        return registrationHelper;
     }
 
     public FtpHelper ftp() {
-        return ftp == null ? new FtpHelper(this) : ftp;
+        if (ftp == null) {
+            ftp = new FtpHelper(this);
+        }
+        return ftp;
     }
 
-//    public LoginPage loginPage() {
-//        return loginPage == null ? new LoginPage(driver) : loginPage;
-//    }
 }
