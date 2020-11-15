@@ -2,23 +2,29 @@ stqa/mantis/model/MailMessage.java
  stqa.mantis.model.MailMessage
 stqa/mantis/appmanager/HelperBase.java
  stqa.mantis.appmanager.HelperBase
-stqa/mantis/appmanager/RegistrationHelper.java
- stqa.mantis.appmanager.RegistrationHelper
-stqa/mantis/tests/LoginTests.java
- stqa.mantis.tests.LoginTests
-stqa/mantis/appmanager/NavigationHelper.java
- stqa.mantis.appmanager.NavigationHelper
 stqa/mantis/appmanager/HttpSession.java
  stqa.mantis.appmanager.HttpSession
 stqa/mantis/appmanager/ApplicationManager.java
  stqa.mantis.appmanager.ApplicationManager
 stqa/mantis/tests/RegistrationTests.java
  stqa.mantis.tests.RegistrationTests
+stqa/mantis/appmanager/MailHelper.java
+ stqa.mantis.appmanager.MailHelper
+stqa/mantis/appmanager/RegistrationHelper.java
+ stqa.mantis.appmanager.RegistrationHelper
+stqa/mantis/appmanager/SoapHelper.java
+ stqa.mantis.appmanager.SoapHelper
+stqa/mantis/tests/SoapTest.java
+ stqa.mantis.tests.SoapTest
+stqa/mantis/tests/LoginTests.java
+ stqa.mantis.tests.LoginTests
+stqa/mantis/appmanager/NavigationHelper.java
+ stqa.mantis.appmanager.NavigationHelper
 stqa/mantis/appmanager/FtpHelper.java
  stqa.mantis.appmanager.FtpHelper
+stqa/mantis/model/Project.java
+ stqa.mantis.model.Project
 stqa/mantis/tests/TestBase.java
  stqa.mantis.tests.TestBase
 stqa/mantis/appmanager/JamesHelper.java
  stqa.mantis.appmanager.JamesHelper
-stqa/mantis/appmanager/MailHelper.java
- stqa.mantis.appmanager.MailHelper

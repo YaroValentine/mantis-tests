@@ -38,6 +38,9 @@ dependencies {
   compile 'org.hibernate:hibernate-core:5.4.20.Final'
   compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
   compile group: 'commons-net', name: 'commons-net', version: '3.6'
+
+  compile 'biz.futureware.mantis:mantis-axis-soap-client:1.2.19'
+
 }
 
 //test {
